@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:Inter, Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: hwb(0 0% 100% / 0.873);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 30px hsla(0, 0%, 2%, 0.912);
+}
+
+header .animate-gradient {
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  color: rgb(109, 40, 217); /* pink-400 like Userology hover */
+}
+
+header nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #cbd5e1; /* slate-300 */
+  transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  background-color: #01010126; /* light pink bg */
+  color:rgb(109, 40, 217); /* pink-400 */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* Global Reset and Basic Styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body covers the full height of the viewport */
+html, body {
+  height: 100%;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a; /* Dark theme background */
+  color: #ffffff; /* White text */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  padding: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* To center a specific container within the page */
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px; /* Optional padding */
+  text-align: center;
+}
+
+/* Example: If you want to center specific parts of the layout like the dashboard content */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column; /* Optional: Adjust content alignment direction */
+}
+
+/* Optional: If you have a wrapper for your content */
+.dashboard-content {
+  width: 100%;
+  max-width: 1200px; /* Max width for larger screens */
+  padding: 1rem;
+  background-color: #1f2937; /* Dark background for the main content */
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for the content */
+}
+
+/* Main content styling */
+.main-content {
+  background-color: #1f2937; /* Dark background */
+  border-radius: 10px;
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  margin-left: 0;
+  transition: margin-left 0.3s ease; /* Optional, for sliding effect */
+}
