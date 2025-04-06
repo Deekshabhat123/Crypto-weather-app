@@ -26,7 +26,8 @@ const Header: React.FC<HeaderProps> = ({ isOpen, setIsOpen }) => {
       Object.entries(data).forEach(([coin, price]) => {
         const newNotification: Notification = {
           id: Date.now(),
-          message: `${coin.toUpperCase()} Price moved to $${parseFloat(price).toFixed(2)}`,
+          message: `${coin.toUpperCase()} Price moved to $${parseFloat(price as string).toFixed(2)}`,
+
           type: "price_alert",
         };
 
