@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',   // <-- This is important for Netlify (Static Export)
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Optional: if you are using images
+  images: {
+    unoptimized: true,
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig;

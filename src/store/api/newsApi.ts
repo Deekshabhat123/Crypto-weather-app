@@ -7,7 +7,7 @@ export const newsApi = createApi({
   }),
   endpoints: (builder) => ({
     getNews: builder.query({
-      query: (category) => `top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`,
+      query: (category) => `top-headlines?country=us&apiKey= d6b8afdfe8a547fdbd50fc2e0a0d1931`,
     }),
   }),
 });
@@ -16,3 +16,4 @@ export const {
   useGetNewsQuery,
   useLazyGetNewsQuery,
 } = newsApi;
+

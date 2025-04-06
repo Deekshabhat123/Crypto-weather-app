@@ -1,5 +1,6 @@
 import DashboardPageContent from '@/components/DashboardPageContent'
 
+
 export const metadata = {
   title: 'Dashboard | CryptoWeather Nexus',
   description: 'Real-time Crypto & Weather Updates',
