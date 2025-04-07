@@ -594,6 +594,12 @@ ul {
     width: 35px;
     height: 30px;
   }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+  .dashboard-content .grid{
+    grid-template-columns: none;
+  }
+}
   /* Add this to your globals.css */
 /* Crypto Card Container Styles */
 .crypto-card-wrapper {
