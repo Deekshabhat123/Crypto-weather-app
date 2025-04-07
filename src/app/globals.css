@@ -602,6 +602,9 @@ ul {
   header .container {
     padding:0;
   }
+        .main-content {
+        padding: 0;
+    }
 }
   /* Add this to your globals.css */
 /* Crypto Card Container Styles */
